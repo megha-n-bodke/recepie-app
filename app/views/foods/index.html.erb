@@ -1,0 +1,8 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="foods-show c-flex">
+  <h2>Foods</h2>
+  <%= link_to "Add Food", new_food_path,  class: 'add-recipes'%>
+  <%= render 'food', foods: @foods%>
+
+</div>
