@@ -13,13 +13,25 @@
 ActiveRecord::Schema[7.0].define(version: 2023_01_04_065711) do
   create_table "foods", force: :cascade do |t|
     t.string "name"
-    t.decimal "measurement_unit"
+    t.float "measurement_unit"
     t.decimal "price"
     t.float "quantity"
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_foods_on_user_id"
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.string "name"
+    t.string "preparation_time"
+    t.string "cooking_time"
+    t.string "description"
+    t.boolean "public"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -36,4 +48,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_04_065711) do
   end
 
   add_foreign_key "foods", "users"
+  add_foreign_key "recipes", "users"
 end

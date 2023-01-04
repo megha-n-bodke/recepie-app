@@ -28,8 +28,6 @@ html {
 
 body {
   font-family: Lato, Helvetica, sans-serif;
-
-  /* padding: 1rem; */
   min-width: 32rem;
   font-size: 1.6rem;
 }
@@ -76,8 +74,6 @@ nav h1 {
   margin: 4rem;
 }
 
-/* table */
-
 .food_table {
   border-collapse: collapse;
   width: 100%;
@@ -103,4 +99,131 @@ nav h1 {
 
 .food_table tr:hover {
   background-color: #ddd;
+}
+
+.recipes-show,
+.foods-show {
+  margin: 2rem;
+}
+
+.recipes-show h2,
+.foods-show h2 {
+  margin-bottom: 2rem;
+}
+
+.add-recipes {
+  align-self: flex-end;
+  background-color: rgb(7, 204, 33);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+}
+
+.recipes-list {
+  border: 1px solid black;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.recipe-title {
+  width: 30%;
+  margin-right: 10%;
+  gap: 2rem;
+  padding-left: 2rem;
+}
+
+.recipe-title a {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.recipe-details-btn-wrapper a {
+  padding: 1.5rem;
+  border: 1px solid #725a8a;
+  color: #725a8a;
+}
+
+.recipe-title a:last-child {
+  margin-left: 1rem;
+}
+
+p strong {
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+.recipe-details {
+  gap: 2rem;
+}
+
+.recipe-toggle-wrapper {
+  width: 100%;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+
+.recipe-details-btn-wrapper {
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #14aa14;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
 }
