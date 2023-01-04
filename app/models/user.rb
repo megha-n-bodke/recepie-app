@@ -8,5 +8,4 @@ class User < ApplicationRecord
   has_many :recipes, dependent: :destroy
 
   validates :name, presence: true, allow_blank: false, allow_nil: false, length: { in: 1...25 }
-
 end
