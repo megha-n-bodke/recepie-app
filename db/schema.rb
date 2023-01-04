@@ -13,7 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2023_01_04_065711) do
   create_table "foods", force: :cascade do |t|
     t.string "name"
-    t.float "measurement_unit"
+    t.decimal "measurement_unit"
     t.decimal "price"
     t.float "quantity"
     t.integer "user_id", null: false
