@@ -28,8 +28,6 @@ html {
 
 body {
   font-family: Lato, Helvetica, sans-serif;
-
-  /* padding: 1rem; */
   min-width: 32rem;
   font-size: 1.6rem;
 }
@@ -75,9 +73,6 @@ nav h1 {
 .container {
   margin: 4rem;
 }
-
-
-/* table */
 
 .food_table {
   border-collapse: collapse;
@@ -174,9 +169,6 @@ p strong {
   padding: 1rem 0;
 }
 
-
-/* switch */
-
 .switch {
   position: relative;
   display: inline-block;
@@ -228,8 +220,6 @@ input:checked + .slider::before {
   transform: translateX(26px);
 }
 
-
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
