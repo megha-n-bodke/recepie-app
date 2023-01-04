@@ -6,8 +6,8 @@
         </header>
         <div class='profile flex'>
            <%= link_to "Home", root_path, class: "logo" %>
-           <%= link_to "Foods", class: "logo" %>   
-           <%= link_to "Recipes", class: "logo" %>   
+           <%= link_to "Foods",  class: "logo" %>   
+           <%= link_to "Recipes", recipes_path, class: "logo" %>   
    
            <%= button_to "Sign Out", destroy_user_session_path, method: :delete , class: "link" %>
         </div>
