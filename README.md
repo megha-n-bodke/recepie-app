@@ -1,39 +1,5 @@
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
-
-<div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -49,40 +15,43 @@ After you're finished please remove all the comments and instructions!
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
+  - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Recipe App  <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+> The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
 
-**[your_project__name]** is a...
 
 ## 🛠 Built With <a name="built-with"></a>
 
+
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 <details>
-  <summary>Client</summary>
+  <summary>Language</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+  </ul>
+</details>
+<details>
+  <summary>Framwork</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">Rails</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://rubyonrails.org/">Rails</a></li>
   </ul>
 </details>
 
@@ -93,15 +62,24 @@ After you're finished please remove all the comments and instructions!
   </ul>
 </details>
 
+<details>
+<summary>Test Library</summary>
+  <ul>
+    <li><a href="https://rspec.info/">RSpec</a></li>
+  </ul>
+</details>
+
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
+- A login page.
+- A registration page.
+- A food list (with all CRUD implementation, except for 'update').
+- A recipes list (with all CRUD implementation, except for 'update').
+- A general shopping list view (all missing food for all your recipes and total price).
+- A list of all public recipes from other users with their names and total prices.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,7 +89,7 @@ After you're finished please remove all the comments and instructions!
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link]( https://github.com/megha-n-bodke/recepie-app) comming soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,76 +97,55 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
 
-<!--
-Example command:
-
 ```sh
  gem install rails
 ```
- -->
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone git@github.com:megha-n-bodke/recepie-app.git
 ```
---->
+
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
-
 ```sh
   cd my-project
   gem install
 ```
---->
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
   rails server
 ```
---->
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
 ```sh
-  bin/rails test test/models/article_test.rb
+  bin/rspec spec
 ```
---->
 
 ### Deployment
 
-You can deploy this project using:
-
+You can deploy this project following this instructions:
+[Read](https://www.theodinproject.com/lessons/ruby-on-rails-preparing-for-deployment)
 <!--
 Example:
 
@@ -203,19 +160,15 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Lawrence Addai Kusi**
+ - GitHub: [@Githubhandle](https://github.com/kusiLaw)
+ - Twitter: [@Twitterhandle](https://twitter.com/kusilaw)
+ - Linkedin: [Linkedin](https://www.linkedin.com/in/lawrence-kusi-55a662104)
 
-👤 **Author1**
+👤 **Megha Bodke**
+- GitHub: [@megha-n-bodke](https://github.com/megha-n-bodke)
+- LinkedIn: [Megha Bodke](https://www.linkedin.com/in/megha-bodke/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -223,13 +176,22 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+> These are features that will be add to the project..
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [X] Creating a data model 
+- [x] Processing data in models 
+- [x] Validations and Model specs 
+- [x] Setup and controllers
+- [x] Controllers specs
+- [x] Views
+- [x] Add forms
+- [x] Integration specs for Views and fixing n+1 problems
+- [x] Add Devise
+- [x] Add authorization rules
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- CONTRIBUTING -->
 
@@ -245,9 +207,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project, you can feel free to add or support
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -255,34 +215,15 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+I would like to thank Microverse for this insight project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
