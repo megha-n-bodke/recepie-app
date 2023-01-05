@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   root "recipes#index"
   get  'public_recipes', to: 'recipes#public_recipes'
-  
+  get  'general_shopping_list', to: 'foods#shopping_list'
+
   resources :foods 
   resources :recipes do
     resources :recipe_foods

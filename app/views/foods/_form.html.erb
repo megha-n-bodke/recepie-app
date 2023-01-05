@@ -19,22 +19,22 @@
 
   <div>
     <%= form.label :measurement_unit, style: "display: block" %>
-    <%= form.text_field :measurement_unit %>
+    <%= form.number_field :measurement_unit , min: 0, max: 1000%>
   </div>
 
   <div>
     <%= form.label :price, style: "display: block" %>
-    <%= form.text_field :price %>
+    <%= form.text_field :price, min: 0 %>
   </div>
 
   <div>
     <%= form.label :quantity, style: "display: block" %>
-    <%= form.text_field :quantity %>
+    <%= form.number_field :quantity, min: 1, max: 1000%>
   </div>
 
    <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+    <%#= form.label :user_id, style: "display: block" %>
+    <%= form.hidden_field :user_id%>
   </div>
 
   <div>

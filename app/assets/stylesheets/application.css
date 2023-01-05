@@ -254,3 +254,18 @@ input:checked + .slider::before {
 .inner_gap {
   gap: 2rem;
 }
+
+.center_self {
+  align-self: center;
+}
+
+.shop_list {
+  width: 100%;
+  justify-content: space-between;
+  padding: 2rem;
+  font-size: 1.8rem;
+}
+
+.shop_list span {
+  margin-left: 1rem;
+}

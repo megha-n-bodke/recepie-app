@@ -19,16 +19,16 @@
 
   <div>
     <%= form.label :preparation_time, style: "display: block" %>
-    <%= form.text_field :preparation_time %>
+    <%= form.number_field :preparation_time, min: 0, max: 1000 %>
   </div>
 
   <div>
     <%= form.label :cooking_time, style: "display: block" %>
-    <%= form.text_field :cooking_time %>
+    <%= form.number_field :cooking_time, min: 0, max: 1000 %>
   </div>
   <div>
     <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, size:'70 x 10' %>
   </div>
 
   <div>
@@ -37,8 +37,8 @@
   </div>
 
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+    <%#= form.label :user_id, style: "display: block" %>
+    <%= form.hidden_field :user_id %>
   </div>
 
   <div>

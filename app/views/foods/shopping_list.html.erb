@@ -1,0 +1,29 @@
+
+<div class='c-flex recipe-details'>
+  <h2 class="center_self">Shopping List</h2>
+  <div class='shop_list flex'>
+    <p>Amount of food items to buy:<span><%= @qty %></span></p>
+    <p>Total value of item needed:<span> $ <%= @sum %></span></p>
+  </div>
+   <table class='food_table'>
+      <tr>
+         <th>Food</th>
+         <th>Quantity</th>
+         <th>Unit Price</th>
+
+      </tr>
+
+      <% @foods.each do |food| %>
+         <%if current_user == food.user%>
+          <tr>
+                <td> <%= food.name %> </td>
+                <td> <%= food.quantity %>   <%= food.measurement_unit  %></td>
+                <td> $ <%= food.price * food.quantity.to_i %> </td>  
+           </tr>
+
+         <%end%>
+      <% end %>
+
+  </table>
+
+ </div>

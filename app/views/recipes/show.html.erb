@@ -17,7 +17,7 @@
   <p>Steps to go here</p>
   <%if current_user == @recipe.user%>
      <div class="recipe-details-btn-wrapper flex">
-       <%= link_to "Generate shopping list", class: 'details-btn'%>
+       <%= link_to "Generate shopping list", general_shopping_list_path, class: 'details-btn'%>
        <%= link_to "Add Ingredient", new_recipe_recipe_food_path(@recipe), class: 'details-btn'%>
     </div>
    <% else %>
