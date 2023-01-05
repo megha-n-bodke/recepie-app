@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!, except: %i[public_recipes]
-  before_action :set_recipe, only: %i[edit show destroy ]
+  before_action :set_recipe, only: %i[edit show destroy]
 
   def index
     # @recipes = Recipe.includes(:user).where(user_id: params[:user_id]) #working
@@ -13,12 +13,9 @@ class RecipesController < ApplicationController
 
   def public_recipes
     # @recipes = Recipe.includes(:user, { recipe_foods: [:food ] } ).where(public: true).order(created_at: :desc).to_sql
-   
+
     @recipes = Recipe.includes(:user, :foods, :recipe_foods).where(public: true).order(created_at: :desc)
-    
   end
-
-
 
   def new
     @recipe = Recipe.new
@@ -73,24 +70,21 @@ class RecipesController < ApplicationController
   end
 
   def total_cost(recipe)
-    recipe = recipe.foods.map do |ingredient|
-      ingredient.price.to_i 
+    recipe.foods.map do |ingredient|
+      ingredient.price.to_i
     end
   end
 
   def total_quantity(recipe)
-    quantity = recipe.recipe_foods.map do |ingredient|
-     ingredient.quantity
-    end
-    
+    recipe.recipe_foods.map(&:quantity)
   end
-  
+
   def total_recipy_food(arrays)
-     total = 0
-     arrays.each do |array|
-       total += array[0] * array[1]
-     end
-     total
+    total = 0
+    arrays.each do |array|
+      total += array[0] * array[1]
+    end
+    total
   end
   helper_method :total_cost, :total_quantity, :total_recipy_food
 end
