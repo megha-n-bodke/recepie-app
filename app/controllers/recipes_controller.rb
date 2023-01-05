@@ -12,7 +12,9 @@ class RecipesController < ApplicationController
   end
 
   def public_recipes
-    @recipes = Recipe.where(public: true).order(created_at: :desc)
+    # @recipes = Recipe.includes(:user, { recipe_foods: [:food ] } ).where(public: true).order(created_at: :desc).to_sql
+
+    @recipes = Recipe.includes(:user, :foods, :recipe_foods).where(public: true).order(created_at: :desc)
   end
 
   def new
@@ -66,4 +68,23 @@ class RecipesController < ApplicationController
   def recipe_params
     params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :public, :user_id)
   end
+
+  def total_cost(recipe)
+    recipe.foods.map do |ingredient|
+      ingredient.price.to_i
+    end
+  end
+
+  def total_quantity(recipe)
+    recipe.recipe_foods.map(&:quantity)
+  end
+
+  def total_recipy_food(arrays)
+    total = 0
+    arrays.each do |array|
+      total += array[0] * array[1]
+    end
+    total
+  end
+  helper_method :total_cost, :total_quantity, :total_recipy_food
 end

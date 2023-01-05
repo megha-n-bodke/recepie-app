@@ -227,3 +227,30 @@ input:checked + .slider::before {
 .slider.round::before {
   border-radius: 50%;
 }
+
+.public {
+  border: 2px solid black;
+  margin: 2rem 0;
+  width: 100%;
+  padding: 2rem;
+}
+
+.inn_wrapper {
+  justify-content: space-between;
+  width: 100%;
+  color: black;
+  padding-right: 6rem;
+}
+
+.capitalized {
+  text-transform: capitalize;
+}
+
+.text-big {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.inner_gap {
+  gap: 2rem;
+}
