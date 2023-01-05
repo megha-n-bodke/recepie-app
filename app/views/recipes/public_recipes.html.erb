@@ -1,0 +1,22 @@
+<div class="recipes-show c-flex">
+     <h2>Public Recipes</h2>
+    <% @recipes.each do |recipe| %>
+       <%# <div class="flex"> %>
+         <a href = "<%= recipe_path(recipe) %>" class="public flex">
+          <div class="inn_wrapper flex ">
+            <div class="c-flex inner_gap">
+               <p class = "capitalized text-big"><%=recipe.name%></p>
+               <p class = "capitalized" >By <%=recipe.user.name%></p>
+            </div>
+
+            <div class="c-flex inner_gap">
+              <p>Total food item: <%=recipe.foods.size%> </p>
+              <p>Total food price: <%=total_recipy_food( total_cost(recipe).zip(total_quantity(recipe)) )%>  </p> 
+                 <%#= recipe.foods.sum(:price) * recipe.recipe_foods.sum(:quantity)  %> 
+            </div>
+          </div>
+         </a>
+       <%# </div> %>
+       
+     <% end %>
+</div>
