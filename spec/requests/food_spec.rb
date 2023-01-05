@@ -9,16 +9,15 @@ RSpec.describe 'Foods', type: :request do
     end
 
     it 'should return http request' do
-        expect(response).to have_http_status(:success)
+      expect(response).to have_http_status(:success)
     end
 
     it 'should render correct path' do
-        expect(response).to render_template(:index)
+      expect(response).to render_template(:index)
     end
 
     it 'should render correct template' do
-        expect(response).to render_template('index')
+      expect(response).to render_template('index')
     end
-
   end
 end
