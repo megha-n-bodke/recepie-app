@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    # @recipe_foods = @recipe.recipe_foods.includes(:food)
+    @recipe_foods = @recipe.recipe_foods.includes(:food)
   end
 
   def public_recipes

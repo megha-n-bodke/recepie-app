@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :foods 
   resources :recipes do
+    resources :recipe_foods
     resources :foods
   end
   resources :users   do 

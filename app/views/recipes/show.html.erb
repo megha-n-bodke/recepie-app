@@ -15,10 +15,42 @@
   </p>
   <p><strong>Cooking time: </strong> <%= @recipe.cooking_time %> </p>
   <p>Steps to go here</p>
-  
-  <div class="recipe-details-btn-wrapper flex">
-   <%= link_to "Generate shopping list", class: 'details-btn'%>
-   <%= link_to "Add Ingredient", class: 'details-btn'%>
-  </div>
-  <%# <%= render 'foods/food', foods: @foods %> 
+  <%if current_user == @recipe.user%>
+     <div class="recipe-details-btn-wrapper flex">
+       <%= link_to "Generate shopping list",  class: 'details-btn'%>
+       <%= link_to "Add Ingredient", new_recipe_recipe_food_path(@recipe), class: 'details-btn'%>
+    </div>
+   <% else %>
+   <div class="recipe-details-btn-wrapper flex">
+       <%= link_to "Generate shopping list", class: 'details-btn'%>
+       <%= link_to "Add Ingredient",  class: 'details-btn'%>
+    </div>
+  <%end%>
 
+<table class='food_table'>
+    <tr>
+       <th>Food</th>
+       <th>Quantity</th>
+       <th>Value</th>
+       <th>Action</th>
+    </tr>
+
+    <% @recipe_foods.each do |recipe_food| %>
+       <%#if current_user == food.user%>
+        <tr>
+              <td> <%= recipe_food.food.name %> </td>
+              <td> <%= recipe_food.quantity %> </td>
+              <td>$ <%= recipe_food.quantity * recipe_food.food.price %> </td>
+              
+              <td> <%= link_to 'Modify', edit_recipe_recipe_food_path( @recipe, recipe_food) %> | 
+                <%= button_to "Delete", recipe_recipe_food_path(@recipe, recipe_food), method: :delete%>      
+
+              </td>
+         </tr>
+
+       <%#end%>
+    <% end %>
+</table>
+
+    <%#= button_to "Destroy this recipe", @recipe, method: :delete , id: 'details-btn' %>
+  </div>
