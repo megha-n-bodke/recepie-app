@@ -1,0 +1,25 @@
+<nav class='flex'>
+  <% if user_signed_in? %>
+    
+        <header>
+          <h1> <%= link_to "Food Recipes", root_path, class: "logo" %></h1>
+        </header>
+        <div class='profile flex'>
+
+           <%= link_to "Foods", foods_path, class: "logo" %>  
+           <%= link_to "Recipes", recipes_path, class: "logo" %>   
+           <%= link_to "Public Recipes", public_recipes_path, class: "logo" %>  
+           <%= button_to "Sign Out", destroy_user_session_path, method: :delete , class: "link" %>
+        </div>
+  <%else%>
+    
+       <header>
+          <h1> <%= link_to "Food Recipes", root_path, class: "logo" %></h1>
+         </header>
+         <div class='profile flex'>
+              <%= link_to "Sign In", new_user_session_path, class: "link" %>
+              <%= link_to "Sign Up", new_user_registration_path, class: "link" %>
+         </div>
+       <%# </header> %>
+  <% end %>
+</nav>

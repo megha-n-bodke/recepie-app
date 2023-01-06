@@ -1,0 +1,27 @@
+<%#= form_with(model: recipe_food) do |form| %>
+<%= form_with model: [ @recipe, @recipe.recipe_foods.build ] do |form| %>
+
+  <% if recipe_food.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(recipe_food.errors.count, "error") %> prohibited this recipe_food from being saved:</h2>
+
+      <ul>
+        <% recipe_food.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+   <div class="form-box">
+      <%= form.label :food_id, class:"label" %><br>
+      <%= form.select :food_id, current_user.foods.collect {|food| [food.name, food.id]},{ include_blank: false} , class:"field" %><br>
+    </div>
+  <div>
+    <%= form.label :quantity, style: "display: block" %>
+    <%= form.number_field :quantity,  min: 1 %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
